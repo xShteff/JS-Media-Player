@@ -44,7 +44,6 @@ class XMediaPlayer {
     }
 
     playSource(sources) {
-        console.log(sources);
         this.stop();
         this.player.setSrc(sources);
         this.play();

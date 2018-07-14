@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#222">
+
     <title>Media Player Thing</title>
 
     <link rel="stylesheet" href="files/images/style.css">
@@ -32,11 +34,9 @@
     </div>
    
     <div id="vue">
-        <ul>
-            <li class="station" v-for="radio in radios" v-bind:data-ip="radio.ip">
-            {{radio.name}}: {{radio.ip}}
-            </li>
-        </ul>
+        <div class="station" v-for="radio in radios" v-bind:data-ip="radio.ip">
+            {{radio.name}}
+        </div>
     </div>
 </body>
 </html>
