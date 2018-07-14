@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="files/js/mediaelement-and-player.js"></script>
+    <script src="files/js/xmediaplayer.js"></script>
+    <title>Media Player Thing</title>
+</head>
+<body>
+    <div style="display:none;">
+        <audio id="audioPlayer" autoplay="true"></audio>
+    </div>
+    <div class="controls">
+        <span class="glyphicon glyphicon-play"></span>
+        <span class="glyphicon glyphicon-pause"></span>
+        <span class="glyphicon glyphicon-stop"></span>
+    </div>
+   
+    <div id="vue">
+        <ul>
+            <li class="station" v-for="radio in radios" v-bind:data-ip="radio.ip">
+            {{radio.name}}: {{radio.ip}}
+            </li>
+        </ul>
+    </div>
+    <div id="play" onclick="">Play</div>
+    <div id="stop" onclick="">Stop</div>
+</body>
+</html>
