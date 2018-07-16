@@ -43,9 +43,10 @@ class XMediaPlayer {
         this.player.setVolume(volume);
     }
 
-    playSource(sources) {
+    playSource(sources, name) {
         this.stop();
         this.player.setSrc(sources);
+        $('#playing').text(`Now playing: ${name}`);
         this.play();
     }
 

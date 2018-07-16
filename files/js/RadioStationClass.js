@@ -1,5 +1,6 @@
 class RadioStation {
-    constructor(name, ip, image) {
+    constructor(id, name, ip, image) {
+        this.id = id;
         this.name = name;
         this.ip = ip;
         this.image = image;

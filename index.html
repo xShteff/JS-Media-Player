@@ -12,31 +12,44 @@
     <link rel="stylesheet" href="files/images/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="files/images/fullpage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
+    <script src="files/js/fullpage.extensions.min.js"></script>
     <script src="files/js/mediaelement-and-player.js"></script>
+
+
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <div style="display:none;">
+                <audio id="audioPlayer" autoplay="true"></audio>
+            </div>
+            <div id="vue">
+                <div class="slide" v-for="page in pages">
+                    <div class="station" v-for="radio in page" v-bind:data-ip="radio.ip" v-bind:data-name="radio.name" v-bind-data-id="radio.id">
+                            {{radio.name}}
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav>
+        <span class="audioControls">
+            <span id="playPause" class="glyphicon glyphicon-play"></span>
+            <span id="stop" class="glyphicon glyphicon-stop"></span>
+        </span>
+        <span id="playing">Currently not playing anything.</span>
+
+    </nav>
+    
     <script src="files/js/XMediaPlayerClass.js"></script>
     <script src="files/js/RadioStationClass.js"></script>
     <script src="files/js/RadioList.js"></script>
     <script src="files/js/App.js"></script>
-
-</head>
-<body>
-    <div style="display:none;">
-        <audio id="audioPlayer" autoplay="true"></audio>
-    </div>
-    <div class="controls">
-        <span id="playPause" class="glyphicon glyphicon-play"></span>
-        <span id="stop" class="glyphicon glyphicon-stop"></span>
-    </div>
-   
-    <div id="vue">
-        <div class="station" v-for="radio in radios" v-bind:data-ip="radio.ip">
-            {{radio.name}}
-        </div>
-    </div>
 </body>
 </html>
