@@ -37,6 +37,25 @@ nav #playing {
     color: white;
     display: inline-block;
     cursor:pointer;
+    transition: all 0.5s ease;
+}
+
+.station.playing {
+    background: rgb(0, 200, 100) !important;
+    transition: all 0.5s ease;
+}
+
+.station .thumbnail {
+    width: available;
+    width: -moz-available;
+    width: -webkit-available;
+    opacity:0.6;
+    transition: all 0.5s ease;
+}
+
+.station .thumbnail:hover{
+    opacity:1;
+    transition: all 0.5s ease;
 }
 
 

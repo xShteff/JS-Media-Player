@@ -19,6 +19,6 @@ $(document).ready(() => {
 	});
 
     $('.station').click((e) => {
-       xMediaPlayer.playSource(e.currentTarget.dataset.ip, e.currentTarget.dataset.name);
+       xMediaPlayer.playSource(e.currentTarget.dataset.ip, e.currentTarget.dataset.name, e.currentTarget.dataset.id);
     })
 });

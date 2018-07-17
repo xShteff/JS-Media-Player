@@ -2,7 +2,9 @@ class XMediaPlayer {
     constructor(selector) {
         this.selector = selector;
         this.playPauseEl = $("#playPause");
-        this.stopEl = $("stop");
+        this.stopEl = $("#stop");
+        this.currentlyPlayingId = "";
+        this.isPlaying = false;
     }
 
     initMediaElement() {
@@ -31,23 +33,39 @@ class XMediaPlayer {
     play() {
         this.player.play();
         this.playPauseEl.attr('class', 'glyphicon glyphicon-pause');
+        this.highlightCurrentStation();
+        this.isPlaying = true;
     }
 
     stop() {
         this.player.pause();
         this.playPauseEl.attr('class', 'glyphicon glyphicon-play');
-
+        this.unhighlightStations();
+        this.isPlaying = false;
     }
 
     setVolume(volume) {
         this.player.setVolume(volume);
     }
 
-    playSource(sources, name) {
-        this.stop();
-        this.player.setSrc(sources);
-        $('#playing').text(`Now playing: ${name}`);
-        this.play();
+    highlightCurrentStation() {
+        $(`.station[data-id="${this.currentlyPlayingId}"]`).addClass('playing')
+    }
+
+    unhighlightStations() {
+        $('.station').removeClass('playing')
+    }
+
+    playSource(sources, name, id) {
+        if(id === this.currentlyPlayingId) {
+            this.playpause();
+        } else {
+            this.currentlyPlayingId = id;
+            this.stop();
+            this.player.setSrc(sources);
+            $('#playing').text(`Now playing: ${name}`);
+            this.play();
+        }    
     }
 
     playpause() {
