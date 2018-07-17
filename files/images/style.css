@@ -18,7 +18,7 @@ nav #playing {
     bottom: 25px;
     right: 10px;
 }
-.controls{
+.controls {
     font-size: 80px;
     width: 50%;
     text-align: center;
@@ -27,17 +27,15 @@ nav #playing {
 }
 
 .station {
-    max-width: 30%;
-    min-height: 100px;
     background: rgba(105, 105, 105, 1);
     border-radius: 10px;
     text-align: center;
-    padding:4px;
-    margin: 5px;
+    margin: 1px 2px;
     color: white;
     display: inline-block;
     cursor:pointer;
     transition: all 0.5s ease;
+    position: relative;
 }
 
 .station.playing {
@@ -45,7 +43,7 @@ nav #playing {
     transition: all 0.5s ease;
 }
 
-.station .thumbnail {
+.station .thumb {
     width: available;
     width: -moz-available;
     width: -webkit-available;
@@ -53,9 +51,15 @@ nav #playing {
     transition: all 0.5s ease;
 }
 
-.station .thumbnail:hover{
+.station .thumb:hover{
     opacity:1;
     transition: all 0.5s ease;
+}
+
+.station .name {
+    position:absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -73,4 +77,23 @@ nav #playing {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+@media screen and (max-height: 400px) {
+    nav {
+        height: 50px;
+    }
+
+    nav .audioControls {
+        font-size: 40px !important;
+    }
+
+    nav #playing {
+        bottom: 14px;
+        font-size: 14px;
+    }
+
+    .station {
+
+    }
 }
