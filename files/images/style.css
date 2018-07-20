@@ -1,3 +1,6 @@
+body {
+    height: 100%;
+}
 nav {
     position:fixed;
     bottom:0;
@@ -81,21 +84,12 @@ nav #playing {
     text-align: center;
 }
 
-@media screen and (max-height: 400px) {
-    nav {
-        height: 50px;
-    }
-
-    nav .audioControls {
-        font-size: 40px !important;
-    }
-
-    nav #playing {
-        bottom: 14px;
-        font-size: 14px;
-    }
-
-    .station .thumb {
-        max-width: 125px;
-    }
+#debug{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 5px;
+    color: white;
 }

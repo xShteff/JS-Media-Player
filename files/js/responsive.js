@@ -1,6 +1,7 @@
 var initResponsive = () => {
-    var docwidth = $(document).width();
-    var docheight = $(document).height();
+    var docwidth = $(window).width();
+    var docheight = $(window).height();
+
     console.log(docwidth/docheight)
     var width = 0;
     if(docwidth > docheight) {
@@ -27,4 +28,7 @@ var initResponsive = () => {
     $('.thumb').css({
         'max-width': width
     });
+
+    $('#debug').text(`Document Width: ${docwidth}; Document Height: ${docheight}; Tile Width: ${width}`);
+
 }
