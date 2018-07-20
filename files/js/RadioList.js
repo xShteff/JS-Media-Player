@@ -80,12 +80,7 @@ var RadioData = {
         name: "Vibe FM",
         ip: "http://89.37.58.102:8000/vibefm_mp3_64k",
         image: `${path}/vibe.png`,
-    },
-    happy: {
-        name: "Happy FM",
-        ip: "http://live.happyfm.ro:8585",
-        image: `${path}/happy.png`,
-    },
+    }
     
 }
 
@@ -113,5 +108,5 @@ var mapDataToPages = (itemsPerPage, data) => {
 
     return pagedData;
 }
-var radioObjs = mapDataToPages(6, mapJsonToClass(RadioData));
+var radioObjs = mapDataToPages(8, mapJsonToClass(RadioData));
 

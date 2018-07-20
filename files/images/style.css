@@ -94,7 +94,7 @@ nav #playing {
         font-size: 14px;
     }
 
-    .station {
-
+    .station .thumb {
+        max-width: 125px;
     }
 }
