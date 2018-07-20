@@ -1,4 +1,9 @@
 var path = "files/images/logos"
+
+var RadioSettings = {
+    path: 'files/images/logos',
+    itemsPerPage: 8
+}
 //This will eventually be pulled from a web service
 var RadioData = {
     kissfm: {
@@ -85,28 +90,5 @@ var RadioData = {
 }
 
 
-var mapJsonToClass = (json) => {
-    var data = [];
-    $.each(json, (key) => {
-        data.push(new RadioStation(key, json[key].name, json[key].ip, json[key].image));
-    });
-    return data;
-}
 
-var mapDataToPages = (itemsPerPage, data) => {
-    var pagedData = [];
-    var totalPages = Math.ceil(data.length / itemsPerPage);
-    for(var i = 0; i < totalPages; i++) {
-        var page = [];
-        pagedData.push(page);
-    }
-
-    for(var i = 1; i < data.length + 1; i++) {
-        var indexPage = Math.ceil((i) / (itemsPerPage)) - 1;
-        pagedData[indexPage].push(data[i - 1]);
-    }
-
-    return pagedData;
-}
-var radioObjs = mapDataToPages(8, mapJsonToClass(RadioData));
 
