@@ -31,7 +31,7 @@
                 <div class="slide" v-for="page in pages">
                     <div class="station-container">
                         <div class="station" v-for="radio in page" v-bind:data-ip="radio.ip" v-bind:data-name="radio.name" v-bind:data-id="radio.id">
-                            <img src="http://via.placeholder.com/150x150" class="thumb"><span class="name">{{radio.name}}</span>
+                            <img v-bind:src="radio.image" class="thumb"><span class="name">{{radio.name}}</span>
                         </div>
                     </div>
                 </div>

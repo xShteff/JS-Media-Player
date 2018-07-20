@@ -49,6 +49,7 @@ nav #playing {
     width: -webkit-available;
     opacity:0.6;
     transition: all 0.5s ease;
+    max-width: 250px;
 }
 
 .station .thumb:hover{
