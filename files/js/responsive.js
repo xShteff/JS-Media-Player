@@ -1,12 +1,10 @@
 var initResponsive = () => {
     var docwidth = $(window).width();
     var docheight = $(window).height();
-
-    console.log(docwidth/docheight)
     var width = 0;
+    
     if(docwidth > docheight) {
         width = (docheight / 2) * 0.7;
-        console.log(`width: ${width}`)
         RadioSettings.itemsPerPage = 8;
     } else {
         width = (docwidth / 4) - 10;

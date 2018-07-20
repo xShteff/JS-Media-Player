@@ -11,6 +11,7 @@ nav {
 
 nav .audioControls {
     font-size: 80px;
+    color: rgba(255, 255, 255, 1);
 }
 
 nav #playing {
@@ -74,7 +75,7 @@ nav #playing {
 }
 
 .slide {
-    background: rgb(200, 100, 0);
+    background: rgb(24, 24, 24);
 }
 
 .station-container {

@@ -37,9 +37,7 @@ $(document).ready(() => {
     });
 
     $('#fullpage').fullpage({
-        //options here
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        sectionColors:['red', 'blue'],
         dragAndMove: true,
 		autoScrolling:true,
 		scrollHorizontally: true

@@ -21,13 +21,13 @@ class XMediaPlayer {
         this.playPauseEl.click(() => {
             that.playpause();
         });
-        this.stopEl.click(() => {
+        /*this.stopEl.click(() => {
             that.stop();
-        })
+        });*/
     }
 
     startEvent() {
-
+        console.log('startevent');
     }
 
     play() {
