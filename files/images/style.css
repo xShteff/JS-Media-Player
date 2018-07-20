@@ -4,22 +4,22 @@ body {
 nav {
     position:fixed;
     bottom:0;
-    height:100px;
+    height:50px;
     background: rgba(69, 69, 69, 0.7);
     width:100%;
 }
 
 nav .audioControls {
-    font-size: 80px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 1);
 }
 
 nav #playing {
     color:rgba(255, 255, 255, 1);
-    font-size: 30px;
+    font-size: 14px;
     position: fixed;
     text-align: right;
-    bottom: 25px;
+    bottom: 14px;
     right: 10px;
 }
 .controls {

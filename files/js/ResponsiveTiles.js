@@ -8,19 +8,6 @@ var initResponsive = () => {
         RadioSettings.itemsPerPage = 8;
     } else {
         width = (docwidth / 4) - 10;
-
-        $('nav').css({
-            height: '50px'
-        });
-
-        $('.audioControls').css({
-            'font-size': '40px'
-        });
-
-        $('nav #playing').css({
-            bottom: '14px',
-            'font-size': '14px'
-        });
         RadioSettings.itemsPerPage = 16; //TODO: Find a way to reinitialise the list in case viewport changes...
     }
     $('.thumb').css({
